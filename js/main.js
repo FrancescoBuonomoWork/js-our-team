@@ -49,10 +49,18 @@ for (let i = 0; i < team.length; i++) {
     const currentTeamMember = team[i];
     console.log(currentTeamMember);
 
-    const string = `<div>
-    nome: ${currentTeamMember['nome']} ruolo: ${currentTeamMember['ruolo']} foto:  ${currentTeamMember['foto']}
-    </div>`;
-    console.log(string);
-    containerDOMElement.innerHTML += string;
+    // const string = `<div>
+    // nome: ${currentTeamMember['nome']} ruolo: ${currentTeamMember['ruolo']} foto:  ${currentTeamMember['foto']}
+    // </div>`;
+
+    const h3Name = `<h3>${currentTeamMember['nome']}</h3>`;
+    const pRole = `<p> ${currentTeamMember['ruolo']} </p>`;
+    const img = `<img src="./img/${currentTeamMember['foto']} alt="">`;
+    // console.log(string);
+    // containerDOMElement.innerHTML += string;
+    containerDOMElement.innerHTML += h3Name;
+    containerDOMElement.innerHTML += pRole;
+    containerDOMElement.innerHTML += img;
+
 
 }
