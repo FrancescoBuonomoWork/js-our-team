@@ -52,15 +52,44 @@ for (let i = 0; i < team.length; i++) {
     // const string = `<div>
     // nome: ${currentTeamMember['nome']} ruolo: ${currentTeamMember['ruolo']} foto:  ${currentTeamMember['foto']}
     // </div>`;
+    
 
+    const card = `<div class="card"></div>`;
+    const cardImg = `<div class="card-img"></div>`;
+    const cardText = `<div class="card-text"></div>`;
+    containerDOMElement.innerHTML += card;
+    cardDOMElement = document.querySelectorAll(".card");
+    // console.log(cardDOMElement);
+    cardDOMElement[i].innerHTML += cardImg;
+    cardDOMElement[i].innerHTML += cardText;
+    // console.log(cardDOMElement);
+
+    
+    
     const h3Name = `<h3>${currentTeamMember['nome']}</h3>`;
     const pRole = `<p> ${currentTeamMember['ruolo']} </p>`;
-    const img = `<img src="./img/${currentTeamMember['foto']} alt="">`;
+    const img = `<img src="./img/${currentTeamMember['foto']}" alt="">`;
     // console.log(string);
     // containerDOMElement.innerHTML += string;
-    containerDOMElement.innerHTML += h3Name;
-    containerDOMElement.innerHTML += pRole;
-    containerDOMElement.innerHTML += img;
+    
+    // containerDOMElement.innerHTML += h3Name;
+    // containerDOMElement.innerHTML += pRole;
+    // containerDOMElement.innerHTML += img;
+    
+    
+    // cardDOMElement[i].innerHTML += h3Name;
+    // cardDOMElement[i].innerHTML += pRole;
+    // cardDOMElement[i].innerHTML += img;
+    cardImgDOMElement = document.querySelectorAll(".card-img");
+    // console.log(cardImgDOMElement);
+    cardTextDOMElement = document.querySelectorAll(".card-text");
+    // console.log(cardTextDOMElement);
+    cardImgDOMElement[i].innerHTML += img;
+    cardTextDOMElement[i].innerHTML += h3Name;
+    cardTextDOMElement[i].innerHTML += pRole;
+
+
+
 
 
 }
