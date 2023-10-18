@@ -1,5 +1,8 @@
 console.log("Team");
 
+const containerDOMElement = document.querySelector(".container");
+console.log(containerDOMElement);
+
 const team = [
     {
         'nome':"Wayne Barnett",
@@ -39,3 +42,17 @@ const team = [
     }
 ]
 console.log(team);
+// console.log(team[0].nome);
+// qui ciclo l array e stampo ogni singolo oggetto con le sue proprietà 
+for (let i = 0; i < team.length; i++) {
+    // console.log(team[i])
+    const currentTeamMember = team[i];
+    console.log(currentTeamMember);
+
+    const string = `<div>
+    nome: ${currentTeamMember['nome']} ruolo: ${currentTeamMember['ruolo']} foto:  ${currentTeamMember['foto']}
+    </div>`;
+    console.log(string);
+    containerDOMElement.innerHTML += string;
+
+}
